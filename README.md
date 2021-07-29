@@ -3,5 +3,5 @@
 
 This Github page is primarily for:
 
-1) [**Reporting bugs and feature requests**](https://github.com/RenderHeads/UnityPlugin-AVProMovieCapture/issues).
+1) [**Reporting bugs and feature requests**](https://github.com/RenderHeads/UnityPlugin-AVProMovieCapture/issues)
 2) [**Downloading the free trial version**](https://github.com/RenderHeads/UnityPlugin-AVProMovieCapture/releases)
