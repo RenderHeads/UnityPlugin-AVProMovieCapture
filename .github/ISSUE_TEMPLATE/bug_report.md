@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+Please DO NOT LINK / ATTACH YOUR PROJECT FILES HERE
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
@@ -32,3 +34,6 @@ If applicable, add screenshots to help explain your problem.
 
 **Videos**
 If applicable, add a copy of your video or the URL
+
+Please DO NOT LINK / ATTACH YOUR PROJECT FILES HERE
+Instead email the link to us unitysupport@renderheads.com
