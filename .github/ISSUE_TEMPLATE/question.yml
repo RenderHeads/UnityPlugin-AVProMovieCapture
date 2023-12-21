@@ -1,0 +1,40 @@
+name: Question
+description: "Ask a question"
+title: "[Question] "
+labels: ["question", "triage"]
+assignees:
+  - Chris-RH
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filling out this question form!
+  - type: input
+    id: avpromoviecapture-version
+    attributes:
+      label: AVPro Movie Capture Version
+      description: The version of the AVPro Movie Capture plugin your question is about.
+      placeholder: "example: 5.2.0-trial"
+    validations:
+      required: false
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Which platform is your question for?
+      description: You can select more than one.
+      options:
+        - Windows
+        - macOS
+        - iOS
+        - Android
+      multiple: true
+    validations:
+      required: false
+  - type: textarea
+    id: request
+    attributes:
+      label: Your question
+      description: Ask your question here
+      placeholder: How do I...
+    validations:
+      required: true

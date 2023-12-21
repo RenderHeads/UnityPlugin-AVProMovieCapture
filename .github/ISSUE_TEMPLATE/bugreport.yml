@@ -1,0 +1,177 @@
+name: Bug Report
+description: "File a bug report"
+title: "[Bug] "
+labels: ["bug", "triage"]
+assignees:
+  - Chris-RH
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to fill out this bug report.
+  - type: markdown
+    attributes:
+      value: "### Please do not link to or attach project files here!"
+  - type: markdown
+    attributes:
+      value: Instead please provide a link to it and send it to [unitysupprt@renderheads.com](mailto:unitysupport@renderheads.com) quoting this issue in your email.
+  - type: input
+    id: unity-version
+    attributes:
+      label: Unity Version
+      description: The version of the Unity editor you are using.
+      placeholder: "example: 2021.3.27f1"
+    validations:
+      required: true
+  - type: input
+    id: avpromoviecapture-version
+    attributes:
+      label: AVPro Movie Capture Version
+      description: The version of the AVPro Movie Capture plugin you are using.
+      placeholder: "example: 5.2.0-trial"
+    validations:
+      required: true
+  - type: dropdown
+    id: platforms
+    attributes:
+      label: Which platform(s) are you using?
+      description: You may select more than one.
+      options:
+        - Windows
+        - macOS
+        - iOS
+        - Android
+      default: 0
+      multiple: true
+    validations:
+      required: true
+  - type: input
+    id: os_versions
+    attributes:
+      label: Which OS version(s) are you using?
+      description: Please provide the OS version for each platform you're reporting this issue for.
+      placeholder: "example: Windows 10, macOS 14.2, iOS 17.2, Android 13"
+    validations:
+      required: true
+  - type: dropdown
+    id: rendering-apis
+    attributes:
+      label: Which rendering API(s) are you using?
+      description: You may select more than one.
+      options:
+        - Direct3D 11
+        - Direct3D 12
+        - Metal
+        - OpenGL
+        - OpenGLES
+        - Vulkan
+      default: 0
+      multiple: true
+    validations:
+      required: true
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware
+      description: Please provide details of the hardware you're using
+    validations:
+      required: true
+  - type: dropdown
+    id: capture-components
+    attributes:
+      label: Which capture component are you using?
+      options:
+        - Capture From Screen
+        - Capture From Camera
+        - Capture From Camera 360
+        - Capture From Camera 360 ODS
+        - Capture From Texture
+        - Capture From WebCamTexture
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: capture-mode
+    attributes:
+      label: Capture mode
+      options:
+        - Realtime
+        - Offline
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: output-mode
+    attributes:
+      label: Which output mode are you using?
+      options:
+        - Video file
+        - Image sequence
+        - Named pipe
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: video-codecs
+    attributes:
+      label: Video codecs
+      options:
+        - H264
+        - HEVC
+        - Apple ProRes 422
+        - Apple ProRes 444
+        - MJPEG
+        - PNG
+        - JPEG
+        - HEIF
+        - TIFF
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: audio-source
+    attributes:
+      label: Audio source
+      options:
+        - Unity
+        - Microphone
+        - Manual
+        - Wwise
+        - Unity Audio Mixer
+    validations:
+      required: true
+  - type: dropdown
+    id: audio-codecs
+    attributes:
+      label: Audio codecs
+      options:
+        - AAC
+        - FLAC
+        - Apple Lossless
+        - Linear PCM
+        - Uncompressed
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: component-config
+    attributes:
+      label: Any other component configuration
+      description: Please provide details of any other component configuration changes
+    validations:
+      required: false
+  - type: textarea
+    id: issue
+    attributes:
+      label: The issue
+      description: Please describe the issue and how to reproduce it.
+      placeholder: 
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: false
