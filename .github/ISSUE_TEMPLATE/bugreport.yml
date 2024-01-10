@@ -51,7 +51,7 @@ body:
       description: Please provide the OS version for each platform you're reporting this issue for.
       placeholder: "example: Windows 10, macOS 14.2, iOS 17.2, Android 13"
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: rendering-apis
     attributes:
@@ -67,14 +67,14 @@ body:
       default: 0
       multiple: true
     validations:
-      required: true
+      required: false
   - type: textarea
     id: hardware
     attributes:
       label: Hardware
       description: Please provide details of the hardware you're using
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: capture-components
     attributes:
@@ -126,7 +126,7 @@ body:
         - TIFF
       default: 0
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: audio-source
     attributes:
@@ -138,7 +138,7 @@ body:
         - Wwise
         - Unity Audio Mixer
     validations:
-      required: true
+      required: false
   - type: dropdown
     id: audio-codecs
     attributes:
@@ -151,7 +151,7 @@ body:
         - Uncompressed
       default: 0
     validations:
-      required: true
+      required: false
   - type: textarea
     id: component-config
     attributes:
