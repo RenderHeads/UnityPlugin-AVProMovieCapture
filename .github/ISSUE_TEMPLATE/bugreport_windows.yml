@@ -72,7 +72,11 @@ body:
     attributes:
       label: Hardware
       description: Please provide details of the hardware you're using to reproduce this issue.
-      placeholder: "Intel Core i5 12400F|nVidia RTX 4060|16GB DDR4 3200MHz|1TB SSD"
+      placeholder: |
+        Intel Core i5 12400F
+        nVidia RTX 4060
+        16GB DDR4 3200MHz
+        1TB SSD
     validations:
       required: true
   - type: dropdown
