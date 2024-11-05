@@ -1,0 +1,165 @@
+name: Android Bug Report
+description: "File a bug report for the Android platform"
+title: "[Android] "
+labels: ["bug", "android", "triage"]
+assignees:
+  - Chris-RH
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to fill out this bug report.
+  - type: markdown
+    attributes:
+      value: "## Please do not link to or attach project files here!"
+  - type: markdown
+    attributes:
+      value: Instead please send a link via email to [unitysupprt@renderheads.com](mailto:unitysupport@renderheads.com) quoting this issue in your email's subject (i.e. '[Android] Something isn't quite right \#1234') and providing a link to the issue in your message.
+  - type: input
+    id: unity-version
+    attributes:
+      label: Unity version
+      description: The specific version of the Unity editor you are using.
+      placeholder: "e.g. 2021.3.27f1"
+    validations:
+      required: true
+  - type: dropdown
+    id: unity-editor-platform
+    attributes:
+      label: Unity editor platform
+      description: The platform you're using for the Unity editor.
+      options:
+        - Windows
+        - macOS
+    validations:
+      required: true
+  - type: dropdown
+    id: avpromoviecapture-edition
+    attributes:
+      label: AVPro Movie Capture edition
+      options:
+        - Trial
+        - Basic
+        - Full
+    validations:
+      required: true
+  - type: input
+    id: avpromoviecapture-version
+    attributes:
+      label: AVPro Movie Capture Version
+      description: The version of the AVPro Movie Capture plugin you are using.
+      placeholder: "e.g. 5.3.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os-versions
+    attributes:
+      label: Which Android OS version(s) are you using?
+      description: Please select the Android OS versions you're reporting this issue for.
+      options:
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+      multiple: true
+    validations:
+      required: true
+  - type: dropdown
+    id: graphics-apis
+    attributes:
+      label: Which graphics API(s) are you using?
+      description: You may select more than one.
+      options:
+        - OpenGLES 3
+        - Vulkan
+      multiple: true
+    validations:
+      required: true
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware
+      description: Please provide details of the Android hardware you're reporting this issue for.
+    validations:
+      required: true
+  - type: dropdown
+    id: capture-components
+    attributes:
+      label: Which capture component are you using?
+      options:
+        - Capture From Screen
+        - Capture From Camera
+        - Capture From Camera 360
+        - Capture From Camera 360 ODS
+        - Capture From Texture
+        - Capture From WebCamTexture
+    validations:
+      required: true
+  - type: dropdown
+    id: capture-mode
+    attributes:
+      label: Capture mode
+      options:
+        - Realtime
+        - Offline
+    validations:
+      required: true
+  - type: dropdown
+    id: output-mode
+    attributes:
+      label: Which output mode are you using?
+      options:
+        - Video file
+        - Image sequence
+    validations:
+      required: true
+  - type: dropdown
+    id: video-codecs
+    attributes:
+      label: Video codecs
+      description: Which video codec/image format are you trying to capture?
+      options:
+        - H264
+        - HEVC
+        - PNG
+        - JPEG
+    validations:
+      required: true
+  - type: dropdown
+    id: audio-source
+    attributes:
+      label: Audio source
+      description: Which audio source are you trying to capture?
+      options:
+        - None_
+        - Unity
+        - Microphone
+        - Manual
+        - Wwise
+        - Unity Audio Mixer
+    validations:
+      required: true
+  - type: textarea
+    id: component-config
+    attributes:
+      label: Any other component configuration required to reproduce the issue.
+    validations:
+      required: false
+  - type: textarea
+    id: issue
+    attributes:
+      label: The issue
+      description: Please describe the issue, how to reproduce it and what you expected the outcome to be.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log output
+      description: Please provide the full, unfiltered logcat for the issue here.
+      render: shell
+    validations:
+      required: false
