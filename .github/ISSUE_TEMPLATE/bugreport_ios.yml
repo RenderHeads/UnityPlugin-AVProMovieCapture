@@ -135,9 +135,9 @@ body:
       required: true
   - type: dropdown
     id: audio-codecs
-      description: Which audio codec are you trying to capture to? If you're not capturing audio please select 'None_'
     attributes:
       label: Audio codecs
+      description: Which audio codec are you trying to capture to? If you're not capturing audio please select 'None_'
       options:
         - None_
         - AAC
