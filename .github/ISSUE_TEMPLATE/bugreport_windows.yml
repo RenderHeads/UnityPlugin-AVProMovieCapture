@@ -1,7 +1,7 @@
-name: iOS Bug Report
-description: "File a bug report for the iOS platform"
-title: "[iOS] "
-labels: ["bug", "iOS", "triage"]
+name: Windows Bug Report
+description: "File a bug report for the Windows platform"
+title: "[Windows] "
+labels: ["bug", "windows", "triage"]
 assignees:
   - Chris-RH
 body:
@@ -13,13 +13,13 @@ body:
       value: "## Please do not link to or attach project files here!"
   - type: markdown
     attributes:
-      value: Instead please send a link via email to [unitysupprt@renderheads.com](mailto:unitysupport@renderheads.com) quoting this issue in your email's subject (i.e. '[iOS] Something isn't quite right \#1234') and providing a link to the issue in your message.
+      value: Instead please send a link via email to [unitysupprt@renderheads.com](mailto:unitysupport@renderheads.com) quoting this issue in your email's subject (i.e. '[Windows] Something isn't quite right \#1234') and providing a link to the issue in your message.
   - type: input
     id: unity-version
     attributes:
       label: Unity version
       description: The specific version of the Unity editor you are using.
-      placeholder: "e.g. 2021.3.27f1"
+      placeholder: "2021.3.27f1"
     validations:
       required: true
   - type: dropdown
@@ -47,30 +47,32 @@ body:
     attributes:
       label: AVPro Movie Capture Version
       description: The version of the AVPro Movie Capture plugin you are using.
-      placeholder: "e.g. 5.3.0"
-    validations:
-      required: true
-  - type: input
-    id: xcode-version
-    attributes:
-      label: Xcode version being used to build your Unity project.
-      placeholder: "e.g. 15.2"
+      placeholder: "5.3.0"
     validations:
       required: true
   - type: input
     id: os-versions
     attributes:
-      label: Which iOS version(s) are you using?
-      description: Please provide the iOS version(s) you're reporting this issue for.
-      placeholder: "e.g. 17.5.0; 18.0.1"
+      label: Which Windows version(s) are you using?
+      description: Please provide the version of Windows you're using to reproduce this issue.
+      placeholder: "Windows 10"
+    validations:
+      required: true
+  - type: dropdown
+    id: graphics-apis
+    attributes:
+      label: Which graphics API(s) are you using?
+      options:
+        - Direct3D 11
+        - Direct3D 12
     validations:
       required: true
   - type: textarea
     id: hardware
     attributes:
       label: Hardware
-      description: Please provide details of the hardware you're reporting this issue for.
-      placeholder: "e.g. iPhone 13 Pro"
+      description: Please provide details of the hardware you're using to reproduce this issue.
+      placeholder: "Intel Core i5 12400F, nVidia RTX 4060, 16GB DDR4 3200MHz, 1TB SSD"
     validations:
       required: true
   - type: dropdown
@@ -102,28 +104,26 @@ body:
       options:
         - Video file
         - Image sequence
+        - Named pipe
     validations:
       required: true
   - type: dropdown
     id: video-codecs
     attributes:
       label: Video codecs
-      description: Which video codec/image format are you trying to capture?
+      description: Which video codec/image format are you trying to capture? If 'Other' please provide details in the Issue field down below.
       options:
         - H264
         - HEVC
-        - MJPEG
         - PNG
         - JPEG
-        - HEIF
-        - TIFF
+        - Other
     validations:
       required: true
   - type: dropdown
     id: audio-source
     attributes:
       label: Audio source
-      description: Which audio source are you trying to capture?
       options:
         - None_
         - Unity
@@ -135,15 +135,12 @@ body:
       required: true
   - type: dropdown
     id: audio-codecs
-      description: Which audio codec are you trying to capture to? If you're not capturing audio please select 'None_'
     attributes:
       label: Audio codecs
+      description: Which audio codec are you trying to capture to? If you're not capturing audio please select 'None_'
       options:
         - None_
         - AAC
-        - FLAC
-        - Apple Lossless
-        - Linear PCM
         - Uncompressed
     validations:
       required: true
